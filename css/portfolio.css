@@ -27,7 +27,7 @@ h1.greet{position: fixed; bottom: 10%; right:5%;font-size: 20px;font-family: 'La
 
 
 #portwrap{margin: 180px auto 0; position: relative; max-width: 900px;}
-#portwrap .slide-captions{position: absolute; top: -34px; z-index: 10; padding-left: 30px;}
+#portwrap .slide-captions{position: absolute; top: -40px; z-index: 10; padding-left: 30px;}
 #portwrap .slide-captions h2{font-size: 60px;font-family: 'Lato', sans-serif;line-height: 1.2;font-weight: 900; }
 #portwrap .slide-captions h3{font-size: 25px;font-family: 'Lato', sans-serif;line-height: 1.2;font-weight:500;}
 #portwrap .swiper{}
