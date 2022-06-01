@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="script/jquery-3.6.0.js"></script>
+    <script src="script/circleChart.js"></script>
+    <script type="text/javascript" src="script/paper-full.js"></script>
+    <script src="script/index.js"></script>
+    <script src="script/index_2.js"></script>
+
+    <title>Introduction</title>
+</head>
+
+<body>
+    <div class="wrap">
+        <header id="header">
+            <!-- <h1 class="title">nr</h1> -->
+            <nav class="fix_nav">
+                <ul class="nav_list">
+                    <li><a href="#header">Main</a></li>
+                    <li><a href="#sec02">Info</a></li>
+                    <li><a href="#sec03">ability</a></li>
+                    <li><a href="#sec04">contact</a></li>
+                    <li class="goto_work"><a href=work.html target="_blank">Works</a></li>
+                </ul>
+            </nav> <!-- fix_nav -->
+        </header>
+
+        <section id="sec01">
+            <canvas id="canvas" resize></canvas>
+            <div class="into_text">
+                <h2>Welcome</h2>
+                <h3>to my page !</h3>
+
+            </div> <!-- into_text -->
+            <div class="illu">
+                <div class="illu_flower" style="background-image: url(img/flower.svg);"></div>
+                <div class="illu_cactus" style="background-image: url(img/cactus.svg);"></div>
+                <div class="illu_fig" style="background-image: url(img/fig.svg);"></div>
+                <div class="illu_rainbow" style="background-image: url(img/rainbow.svg);"></div>
+            </div> <!-- illu -->
+            <div class="down"></div>
+        </section> <!-- sec01 -->
+
+        <section id="sec01_2">
+            <div class="sec01_2_inner">
+
+            </div> <!-- sec01_2_inner -->
+        </section> <!-- sec01_2 -->
+
+        <section id="sec02">
+            <div class="sec02_inner">
+
+                <div class="adjective">
+                    <div class="p_box">
+
+                        <p class="f_p"> <span>design</span></p>
+                        <p class="s_p"><span>for</span></p>
+                        <p class="t_p"> <span>communication. </span></p>
+                    </div> <!-- p_box -->
+                        <div class="circle"><a href="#"></a></div>
+                </div> <!-- adjective -->
+                <div class="circle_contents">
+                    <ul>
+                        <li>Web Designer and Web Publisher</li>
+                        <li> <span>&lt; name/&gt; </span> 이나라</li>
+                        <li><span>&lt; age/&gt; </span>25 years old</li>
+                        <li><span>&lt; major/&gt; </span>creative writing</li>
+                        <li><span>&lt; activity/&gt; </span></li>
+                        <li>HIMEDIA computer design academy</li>
+                        <li><span>&lt; license/&gt; </span>GTQ 포토샵 1급</li>
+                        <li>웹디자인기능사 (12월 예정)</li>
+                    </ul>
+                </div> <!-- circle_contents -->
+
+
+                
+
+
+
+            </div> <!-- sec02_inner -->
+        </section> <!-- sec02 -->
+
+
+
+
+        <section id="sec03">
+            <div class="sec03_inner">
+                <h3>Ability</h3>
+                <div class="chart">
+                    <div class="chart_html">
+                        <div class="circleChart" id="html"></div>
+                        <p>HTML</p>
+                    </div> <!-- chart_html -->
+
+                    <div class="chart_css">
+                        <div class="circleChart" id="css"></div>
+                        <p>CSS</p>
+                    </div> <!-- chart_css -->
+
+                    <div class="chart_javascript">
+                        <div class="circleChart" id="javascript"></div>
+                        <p>javascript</p>
+                    </div> <!-- chart_javascript -->
+
+                    <div class="chart_jquery">
+                        <div class="circleChart" id="jquery"></div>
+                        <p>jQuery</p>
+                    </div> <!-- chart_jquery -->
+
+                    <div class="chart_photoshop">
+                        <div class="circleChart" id="photoshop"></div>
+                        <p>photoshop</p>
+                    </div> <!-- chart_photoshop -->
+
+                    <div class="chart_illust">
+                        <div class="circleChart" id="illust"></div>
+                        <p>illustrator</p>
+                    </div> <!-- chart_illust -->
+
+                </div> <!-- chart -->
+            </div> <!-- sec03_inner -->
+
+
+
+        </section> <!-- sec03 -->
+        <section id="sec04">
+            <div class="sec04_inner">
+                <h3>contact.</h3>
+                <div class="cont">
+                    <p><span><img src="img/icon-phone.svg" alt=""></span>010-2833-5328</p>
+                    <p><span><img src="img/icon-email.svg" alt=""></span>olu-zr@naver.com</p>
+                </div><!-- cont -->
+            </div> <!-- sec04_inner -->
+        </section> <!-- sec04 -->
+        <section id="sec05">
+            <div class="sec05_inner">
+                <div class="hand"></div>
+                <div class="twink"></div>
+                <div class="twink2"></div>
+                <div class="location">
+                    <!-- <p>click me!</p> -->
+                    <a href="work.html"><img src="img/work.svg" alt="work"></a></div>
+                    <div class="comment">
+                        <h4>
+                            Check out
+                        </h4>
+                        
+                        <h5>my works !</h5>
+                    </div> <!-- comment -->
+                    <div class="left_arrows"></div>
+                    
+
+            </div> <!-- sec05_inner -->
+            <div class="sec05_bottom"></div>
+        </section> <!-- sec05 -->
+
+
+
+
+
+
+    </div> <!-- wrap -->
+
+
+
+
+    <!-- 캔버스 -->
+    <script type="text/paperscript" canvas="canvas">
+        var width, height, center;
+        var points = 10;
+        var smooth = true;
+        var path = new Path({
+            fillColor: '#369678' <!--  초록색  -->
+        });
+        var mousePos = view.center / 2;
+        var pathHeight = mousePos.y;
+        initializePath();
+
+        function initializePath() {
+            center = view.center;
+            width = view.size.width;
+            height = view.size.height / 1.7;
+            path.segments = [];
+            path.add(view.bounds.bottomLeft);
+            for (var i = 1; i < points; i++) {
+                var point = new Point(width / points * i, center.y);
+                path.add(point);
+            }
+            path.add(view.bounds.bottomRight);
+            <!-- path.fullySelected = true; -->
+        }
+
+        function onFrame(event) {
+            pathHeight += (center.y - mousePos.y - pathHeight) / 10;
+            for (var i = 1; i < points; i++) {
+                var sinSeed = event.count + (i + i % 10) * 100;
+                var sinHeight = Math.sin(sinSeed / 160) * pathHeight;
+                var yPos = Math.sin(sinSeed / 190) * sinHeight + height;
+                path.segments[i].point.y = yPos;
+            }
+            if (smooth)
+                path.smooth({ type: 'continuous' });
+        }
+
+        function onMouseMove(event) {
+            <!-- mousePos = event.point; -->
+        }
+
+        function onMouseDown(event) {
+            smooth = !smooth;
+            if (!smooth) {
+                // If smooth has been turned off, we need to reset
+                // the handles of the path:
+                for (var i = 0, l = path.segments.length; i < l; i++) {
+                    var segment = path.segments[i];
+                    segment.handleIn = segment.handleOut = null;
+                }
+            }
+        }
+
+        // Reposition the path whenever the window is resized:
+        function onResize(event) {
+            initializePath();
+        }
+    </script>
+
+    <!-- 캔버스 -->
+</body>
+
+</html>

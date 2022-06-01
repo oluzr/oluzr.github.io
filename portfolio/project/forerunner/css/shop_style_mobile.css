@@ -1,0 +1,103 @@
+@charset "utf-8";
+
+.home {
+
+    width: 80px;
+    height: 80px;
+    /* border: 1px solid; */
+}
+
+#img_slide {
+    /* border: 1px solid; */
+    /* height: 30vh; */
+    display: none;
+
+}
+
+.mob {
+    position: relative;
+    top: 80px;
+    height: 40vh;
+    /* border: 1px solid; */
+    width: 100%;
+    background: url(../etc/nike-flyknit.png) center bottom no-repeat;
+    background-size: cover;
+    
+}
+
+#best {
+    /* background-color: darkblue; */
+    height: auto;
+    margin-bottom: 20%;
+    margin-top: 20%;
+}
+
+#best h2 {
+    padding-left: 5%;
+
+    font-size: 3.5vw;
+    margin-bottom: 2%;
+}
+
+#best .best_item {
+
+    /* border: 1px solid black; */
+    display: table;
+}
+
+#best .best_item li {
+    width: 48%;
+    margin-right: 1%;
+    margin-bottom: 5%;
+}
+
+#best .best_item li .item_img {
+    height: 30vh;
+}
+
+#best .best_item li .item_text {
+    padding: 3%;
+}
+
+#new {
+    /* background-color: darkblue; */
+    height: auto;
+}
+
+#new h2 {
+    padding-left: 5%;
+    font-size: 3.5vw;
+    margin-bottom: 2%;
+}
+
+#new .new_item {
+    display: table;
+}
+
+#new .new_item li {
+    width: 48%;
+    margin-right: 1%;
+    margin-bottom: 5%;
+
+}
+
+#new .new_item li .item_img {
+    height: 30vh;
+}
+
+#new .new_item li .item_text {
+    padding: 3%;
+}
+
+#brand h2 {
+    font-size: 16px;
+}
+
+.f_info_right {
+    display: none;
+}
+
+.foot_inner {
+    width: 500px;
+    margin-left: 10%;
+}

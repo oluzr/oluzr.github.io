@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/index_style.css">
+    <link rel="stylesheet" href="css/index_main_style.css">
+
+    <script src="script/jquery-3.6.0.js"></script>
+    <script src="script/index_script.js"></script>
+    <script src="script/index_main_script.js"></script>
+    <title>Winter book</title>
+</head>
+<body>
+    <div class="wrap">
+        <aside>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="main.html">소개</a></li>
+                <li><a href="book.html">올해의 도서 10선</a></li>
+                <li><a href="map.html">찾아오시는 길</a></li>
+            </ul>
+            <div class="aside_close"><a href="#">close</a></div>
+        </aside>
+        <header id="header">
+            <div class="head_aside">
+                <a href="#">
+                    <div class="head_aside_btn"></div>
+                </a>
+            </div> <!-- head_aside -->
+            <!-- <h1><a href="index.html">Winter book festival </a></h1> -->
+        </header>
+
+        <section id="section">
+            <div class="title">
+                <h2>winter</h2>
+                <h3>book</h3>
+                <h4>Festival</h4>
+                <div class="tit_info">
+                    <div class="tit_locat">seoul coex 1F</div>
+                    <div class="tit_date">12/23~12/25</div>
+                </div><!--  tit_info -->
+            </div> <!-- title -->
+            <canvas id="myCanvas"></canvas>
+            <div class="island"></div>
+            
+            <div class="bottom_img1"></div>
+
+        </section>
+        
+        
+        <div class="illu_book1"><img src="img/illu_book1.gif" alt="b1"></div>
+        <div class="illu_book2"><img src="img/illu_book2.gif" alt="b2"></div>
+        <div class="illu_book3"><img src="img/illu_book3.gif" alt="b3"></div>
+        
+        
+        <div class="bottom_line"></div>
+        <div class="info_date">
+            <p>12/23-12/26</p>
+        </div> <!-- info_date -->
+        <div class="info_name">
+            <p>COEX</p>
+        </div>
+    </div> <!-- wrap -->
+    <script type="text/javascript" src="script/howler.core.js"></script>
+    <script type="text/javascript" src="script/paper-full.js"></script>
+    <script type="text/paperscript" canvas="myCanvas"> 
+    
+var stars = [];
+var velocity = 2;
+var generateRate = 150 
+var newRandom;
+
+function randomInt(min,max)
+{
+    return Math.floor(Math.random()*(max-min+1)+min);
+}
+
+for(var i = 0; i <= 3000; i++) {
+	var star = new Path.Circle(new Point(view.size.width, view.size.height) * Point.random(), randomInt(0.5, 2))
+	stars.push(star)
+}
+
+
+for(var i = 0; i < stars.length; i++) {
+	var chance = Math.random()
+
+	if(chance < 0.025) {
+		stars[i].fillColor = "rgb(62, 200, 255)";
+	}
+
+	else if(chance < 0.6) {
+		stars[i].fillColor = "skyblue";
+	}
+
+	else {
+		stars[i].fillColor =  "white";
+	}
+}
+
+
+for(var i = 0; i < stars.length; i++) {
+	var assignedRate = Math.random() * velocity + 0.1
+	stars[i].rate = assignedRate;
+}
+
+function onKeyDown(event) {
+
+	if(event.key == 'd') {
+		velocity += 1
+		for(var i = 0; i < stars.length; i++) {
+		var assignedRate = Math.random() * velocity + 0.1
+		stars[i].rate = assignedRate;
+
+		}
+	}
+
+
+	else if(event.key == 'a') {
+		velocity -= 1
+		for(var i = 0; i < stars.length; i++) {
+		var assignedRate = Math.random() * velocity + 0.1
+		stars[i].rate = assignedRate;
+		}
+	}
+
+}
+
+
+function onFrame(event) {
+	for(var i = 0; i < stars.length; i++) {
+		stars[i].translate(stars[i].rate, 0)
+		if(stars[i].position.x > view.size.width) {
+				stars[i].position.x = 0;
+	}
+
+	else if(stars[i].position.x < 0) {
+		stars[i].position.x = view.size.width;
+	}
+
+	
+	}
+	
+}
+</script>
+
+</body>
+
+</html>

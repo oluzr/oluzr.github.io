@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/map_style.css">
+    <script src="script/jquery-3.6.0.js"></script>
+    <script src="script/index_script.js"></script>
+    <title>Winter book</title>
+</head>
+
+<body>
+    <div class="wrap">
+        <aside>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="main.html">소개</a></li>
+                <li><a href="book.html">올해의 도서 10선</a></li>
+                <li><a href="map.html">찾아오시는 길</a></li>
+            </ul>
+            <div class="aside_close"><a href="#">close</a></div>
+        </aside>
+        <header id="header">
+            <div class="head_aside">
+                <a href="#">
+                    <div class="head_aside_btn"></div>
+                </a>
+            </div> <!-- head_aside -->
+            <h1><a href="index.html">Winter book festival </a></h1>
+        </header>
+
+        <section id="section">
+            <canvas id="myCanvas"></canvas>
+            <div class="island"></div>
+            <!-- <div class="island_bg"></div> -->
+            <!-- <p>찾아오시는 길</p> -->
+
+            
+            <div class="map"><a href="#">Google Map</a></div>
+            <div class="park"><a href="#">Parking</a></div>
+            <div class="illu_cha"></div>
+        </section>
+            
+            <div class="more_info_bg"></div>   <!-- 검정바탕 배경 -->
+        <div class="more_info">  <!-- 팝업창 내용 -->
+            <div class="info_close"><a href="#">close</a></div>
+
+            <h3> 찾아오시는 길 </h3>
+            <div class="p_map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3164.870261721563!2d127.0587862652864!3d37.51097797980832!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca536e4738c97%3A0x336c7537649c9fe4!2z7L2U7JeR7Iqk!5e0!3m2!1sko!2skr!4v1634387399090!5m2!1sko!2skr" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div>
+
+            
+
+
+
+
+        </div> <!-- more_info -->
+
+
+
+        <div class="bottom_line"></div>
+        <div class="info_date">
+            <p>12/23-12/26</p>
+        </div> <!-- info_date -->
+        <div class="info_name">
+            <p>COEX</p>
+        </div>
+
+        <div class="service_popup">
+            <div class="service">
+                <p>서비스 준비중 … </p>
+                <!-- <p>신청 OPEN <br> 12/21 09:00AM</p> -->
+            </div>  <!-- service -->
+        </div><!-- service_popup -->
+    </div> <!-- wrap -->
+
+
+
+    <script type="text/javascript" src="script/howler.core.js"></script>
+    <script type="text/javascript" src="script/paper-full.js"></script>
+    <script type="text/paperscript" canvas="myCanvas">
+        var stars = [];
+        var velocity = 2;
+        var generateRate = 150 
+        var newRandom;
+        
+        function randomInt(min,max)
+        {
+            return Math.floor(Math.random()*(max-min+1)+min);
+        }
+        
+        for(var i = 0; i <= 4000; i++) {
+            var star = new Path.Circle(new Point(view.size.width, view.size.height) * Point.random(), randomInt(0.5, 2))
+            stars.push(star)
+        }
+        
+        
+        for(var i = 0; i < stars.length; i++) {
+            var chance = Math.random()
+        
+            if(chance < 0.025) {
+                stars[i].fillColor = "white";
+            }
+        
+            else if(chance < 0.6) {
+                stars[i].fillColor = "rgb(10, 15, 46)";
+            }
+
+            else {
+                stars[i].fillColor =  "white";
+            }
+
+        }
+        
+        
+        for(var i = 0; i < stars.length; i++) {
+            var assignedRate = Math.random() * velocity + 0.1
+            stars[i].rate = assignedRate;
+        }
+        
+        function onKeyDown(event) {
+        
+            if(event.key == 'd') {
+                velocity += 1
+                for(var i = 0; i < stars.length; i++) {
+                var assignedRate = Math.random() * velocity + 0.1
+                stars[i].rate = assignedRate;
+        
+                }
+            }
+        
+        
+            else if(event.key == 'a') {
+                velocity -= 1
+                for(var i = 0; i < stars.length; i++) {
+                var assignedRate = Math.random() * velocity + 0.1
+                stars[i].rate = assignedRate;
+                }
+            }
+        
+        }
+        
+        
+        function onFrame(event) {
+            for(var i = 0; i < stars.length; i++) {
+                stars[i].translate(stars[i].rate, 0)
+                if(stars[i].position.x > view.size.width) {
+                        stars[i].position.x = 0;
+            }
+        
+            else if(stars[i].position.x < 0) {
+                stars[i].position.x = view.size.width;
+            }
+        
+            
+            }
+            
+        }
+    
+    </script>
+    <script src="script/map_script.js"></script>
+</body>
+
+</html>

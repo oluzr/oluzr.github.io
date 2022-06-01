@@ -1,0 +1,596 @@
+@charset "utf-8";
+
+body {
+    /* background-color: darkseagreen; */
+    /* box-sizing: unset; */
+}
+
+.wrap {}
+
+#header {
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    z-index: 400;
+}
+
+
+
+.nav {
+    background-color: rgba(0, 0, 0, .3);
+    z-index: 10;
+    top: -100px;
+    width: 100%;
+    height: 100px;
+    color: white;
+    position: absolute;
+    transition: all .5s;
+}
+
+.nav.on {
+    top: 0;
+}
+
+.nav ul {
+    text-align: center;
+    margin: 35px 0 0;
+}
+
+.nav ul li {
+    display: inline-block;
+    padding: .3% 5%;
+}
+
+.nav ul li a {
+    display: block;
+    font-weight: bold;
+    text-transform: uppercase;
+
+}
+
+.f_nav {
+    width: 100%;
+    height: 100px;
+    /* color: white; */
+    color: black;
+    position: absolute;
+    transition: all .5s;
+    z-index: 5;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0);
+
+}
+
+.f_nav ul {
+    text-align: center;
+    margin: 35px 0 0;
+}
+
+.f_nav ul li {
+    display: inline-block;
+    /* padding: 5px 100px; */
+    padding: .3% 5%;
+
+}
+
+.f_nav ul li a {
+    display: block;
+    font-weight: bold;
+    text-transform: uppercase;
+
+}
+
+
+
+.contents {
+    position: fixed;
+    top: 0;
+}
+
+.contents .page {
+
+    /* padding: 150px; */
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+    /* max-width: 1920px; */
+    /* max-height: 1080px; */
+}
+
+
+
+
+
+.btn_group {
+    position: fixed;
+    right: 50px;
+    top: 150px;
+}
+
+.btn_group ul {}
+
+.btn_group ul li {
+    margin-bottom: 7px;
+}
+
+.btn_group ul li a {
+    display: block;
+    background-color: whitesmoke;
+    text-indent: -9999px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.btn_group ul li.on a,
+.btn_group ul li a:hover {
+    background-color: teal;
+}
+
+
+#main {
+    position: relative;
+    background-color: aliceblue;
+    background: url(../etc/race-bg.png)no-repeat center center;
+    background-size: cover;
+}
+
+#main p {
+    font-size: 3rem;
+    position: absolute;
+}
+
+#main p.left_p {
+
+    color: rgba(255, 255, 255, 0.63);
+
+    top: 32%;
+    left: -100%;
+    font-size: 6.5vw;
+
+    font-weight: 500;
+    letter-spacing: -0.9vw;
+
+}
+
+
+
+#main p.right_p {
+
+    letter-spacing: -0.5vw;
+    word-spacing: 2vw;
+
+    color: rgba(255, 255, 255, 0.61);
+    top: 50%;
+    right: -100%;
+    font-size: 3.7vw;
+    font-weight: 100;
+}
+
+
+
+
+#shop {
+    width: 100%;
+    height: 100vh;
+}
+
+.shop_view {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.shop_view ul {}
+
+.shop_view ul li {
+    position: absolute;
+}
+
+.shop_view ul li.visual1 {
+    background: url(../etc/nike-flyknit.png) no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+.shop_view ul li.visual2 {
+    background: url(../etc/main-img.png) no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh
+}
+
+.shop_view ul li.visual3 {
+    background: url(../etc/MAIN-NIKE-ORANGE4.png) no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh
+}
+
+.shop_view .go_to {
+    position: absolute;
+    /* z-index: 100; */
+    bottom: 9%;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+.shop_view .go_to a {
+    display: block;
+    color: white;
+    border: 1px solid white;
+    /* border-radius: 10%; */
+    padding: 10px 30px;
+    font-size: 1.5rem;
+    letter-spacing: -3px;
+}
+
+.shop_btn_group {
+    position: absolute;
+    bottom: 18%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.shop_btn_group a {
+    display: inline-block;
+    background-color: rgb(255, 255, 255);
+    width: 15px;
+    height: 15px;
+    text-indent: -9999px;
+    border-radius: 50%;
+    margin-right: 9px;
+    box-shadow: 0 0 5px gray;
+}
+
+.shop_btn_group a.on {
+    background-color: yellow;
+}
+
+#app {
+    background: url(../etc/app-bg3.png)fixed center no-repeat;
+    position: relative;
+}
+
+#app .app_view {
+    width: 100vw;
+    height: 100vh;
+    background: url(../etc/app-visu2.png) center no-repeat;
+}
+
+#app .download {
+    /* width: 400px; */
+    width: 13vw;
+    height: 13vh;
+    height: 300px;
+    background: url(../etc/download.png) no-repeat center center;
+    background-size: contain;
+    position: absolute;
+    bottom: 2%;
+    right: 4%;
+    z-index: 300;
+    cursor: pointer;
+}
+
+
+#race {
+    transition: all 1s;
+    position: relative;
+    background: url(../etc/race-bg3.png) no-repeat center center;
+}
+
+
+
+
+
+#race .content {
+    width: 240px;
+    height: 70px;
+    background-color: rgb(0, 0, 0);
+    margin-left: 5%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all .3s;
+    /* border-radius: 15px 15px; */
+    box-shadow: 0px 0px 100px 10px rgba(190, 190, 190, 0.507);
+    z-index: 100;
+}
+
+#race .box_inner {
+    width: 230px;
+    height: 60px;
+    /* background-color: violet; */
+    position: relative;
+    top: 50%;
+    left: 50%;
+    font-weight: 700;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    line-height: 60px;
+    font-size: 1.1vw;
+    color: rgba(255, 255, 255, 0.856);
+    /* letter-spacing: -0.1vw; */
+}
+
+#race .text {
+    /* color: white; */
+    /* display: none; */
+}
+
+#race .box_inner::before,
+#race .box_inner::after {
+    /* border-radius: 15px 15px; */
+    position: absolute;
+    content: "";
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0%;
+    height: 0%;
+    border: 1px rgb(255, 255, 255);
+    transition: all .3s;
+}
+
+
+#race .box_inner::before {
+    width: 100%;
+    border-style: none solid;
+
+}
+
+#race .box_inner::after {
+    height: 100%;
+    border-style: solid none;
+
+}
+
+#race .content:hover>.box_inner::after {
+    width: 100%;
+    /* border-radius: 5px; */
+}
+
+#race .content:hover>.box_inner::before {
+    height: 100%;
+    /* border-radius: 5px; */
+}
+
+#race .content:hover .text {
+    display: block;
+    color: white;
+}
+
+#race .content:hover {
+    background-color: rgba(0, 0, 0, 0.719);
+}
+
+
+
+
+
+
+
+#race h3,
+#race h4 {
+    position: absolute;
+    /* right: 10%; */
+    color: rgba(0, 0, 0, 0.897);
+    font-size: 5vw;
+    font-weight: 800;
+    letter-spacing: 2vw;
+    right: -40vw;
+    opacity: 0;
+
+}
+
+#race h4 {
+    /* right: 21%; */
+    top: 40%;
+    font-size: 6vw;
+    transition: all 1s;
+}
+
+
+#race h3 {
+    z-index: 3;
+    color: rgba(255, 255, 255, 0.897);
+    top: 50%;
+    transition: all 1s;
+    /* right: 9%; */
+}
+
+#race .logo {
+    width: 20vw;
+    height: 50vh;
+    /* border: 10px solid red; */
+    background: url(../etc/logo.black2.png) no-repeat center center;
+    background-size: contain;
+    position: absolute;
+    right: -16%;
+    top: 20%;
+    opacity: 0;
+    transition: all 1s;
+
+}
+
+#race h4.on {
+    letter-spacing: -0.2vw;
+    right: 21%;
+    opacity: 1;
+}
+
+#race h3.on {
+    right: 9%;
+    letter-spacing: 0.7vw;
+    opacity: 1;
+}
+
+#race .logo.on {
+    right: 6%;
+    opacity: 1;
+
+}
+
+#race .circle {
+    height: 100vh;
+    width: 40%;
+    background: url(../etc/race-circle.png) no-repeat left top;
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    left: -33vw;
+    z-index: 0;
+    /* opacity: 0; */
+    transition: all 1s;
+}
+
+#race .circle.on {
+    left: -3vw;
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+#race p {
+
+    position: absolute;
+    font-size: 0.8vw;
+    color: black;
+    letter-spacing: -0.1vw;
+    /* word-spacing: 0.5vw; */
+    /* background-color: cadetblue; */
+    font-weight: 700;
+    /* opacity: 0; */
+    transition: all 1s;
+}
+
+
+
+#race p span {
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    font-weight: 300;
+    background-color: black;
+    padding: 4px 7px;
+    text-align: center;
+    border-radius: 7px;
+    letter-spacing: 0;
+}
+
+#race p.p1 {
+
+    left: -24vw;
+    top: 20vh;
+}
+#race p.p1.on {
+
+    left: 24vw;
+}
+
+
+
+
+
+
+
+
+#race p.p2 {
+
+    left: -26vw;
+    top: 28vh;
+}
+
+#race p.p2.on {
+
+    left: 26vw;
+
+}
+
+
+#race p.p3 {
+
+    left: -28vw;
+    top: 37vh;
+}
+#race p.p3.on {
+
+    left: 28vw;
+
+}
+
+
+
+#race p.p4 {
+
+    left: -30vw;
+    top: 46vh;
+}
+#race p.p4.on {
+
+    left: 29vw;
+
+}
+
+
+
+
+#race p.p5 {
+
+    left: -29vw;
+    top: 55.5vh;
+}
+#race p.p5.on {
+
+    left: 29vw;
+
+}
+
+
+
+
+#race p.p6 {
+
+    left: -27vw;
+    top: 65vh;
+}
+#race p.p6.on {
+
+    left: 27vw;
+
+}
+
+
+
+
+#race p.p7 {
+
+    left: -25vw;
+    top: 75vh;
+}
+#race p.p7.on {
+
+    left: 25vw;
+
+}
+
+
+
+
+#race p.p8 {
+
+    left: -22vw;
+    top: 84vh;
+}
+#race p.p8.on {
+
+    left: 22vw;
+
+}
