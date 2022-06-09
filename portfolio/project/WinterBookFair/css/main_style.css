@@ -242,42 +242,46 @@ aside ul li a:hover {
 }
 
 .info_wrap {
-    padding: 4% 6%;
+    /* padding: 4% 6%; */
     width: 1140px;
     margin: 0 auto;
     height: 600px;
     /* background-color: rgba(243, 243, 243, 0.699); */
-    position: relative;
+    /* position: relative; */
+    display:flex;
 }
+.info_wrap>div{}
+.info_wrap .LEFT{width: 30%;}
+.info_wrap .RIGHT{width: 70%;padding-top: 60px;}
 
 .info_badge {
-    left: 0;
-    /* width: 250px; */
-    width: 14vw;
-    /* height: 350px; */
-    height: 36vh;
+
+    width: min-content;
     background-color: rgb(0, 44, 63);
-    position: absolute;
-    z-index: 10;
-    top: 60px;
+
     /* font-family: 'Roboto', sans-serif; */
     color: #ccc;
-    padding: 5% 3%;
+    padding: 7% 10%;
     opacity: 0;
-    transition: all .8s;
+    transition: opacity .8s, margin-top .6px;
+    position: relative;
+    opacity: 1;
+    margin: -60px auto 20px;
+
 }
 
 .info_badge.show {
     opacity: 1;
-    top: -60px;
+    margin-top: -60px;
+
 }
 
 
 .info_badge h4 {
-    margin-bottom: 2vh;
+    /* margin-bottom: 2vh; */
     /* font-family: 'Libre Baskerville', serif; */
     /* font-family: 'Roboto', sans-serif; */
-    font-size: .7vw;
+    font-size: 15px;
     letter-spacing: 2.3vw;
     font-weight: 600;
 
@@ -290,10 +294,11 @@ aside ul li a:hover {
     font-family: 'Roboto', sans-serif;
     /* font-family: 'Libre Baskerville', serif; */
     font-size: 1.8vw;
+    font-size: 40px;
     /* border-bottom: 2px solid #ccc; */
     padding-bottom: 1vh;
     /* margin-top: -1vh; */
-    line-height: 4vh;
+    /* line-height: 4vh; */
     letter-spacing: .7vw;
     font-weight: 200;
     margin-bottom: 2vh;
@@ -311,20 +316,17 @@ aside ul li a:hover {
     font-weight: 300;
     font-family: 'Roboto', sans-serif;
     text-align: left;
-    font-size: .76vw;
+    font-size: 13px;
     border-bottom: 1px solid #ccc;
     padding-bottom: 1vh;
 
-    margin-bottom: 5vh;
+    margin-bottom: 3vh;
 }
 
 
 .info_go_to {
-    position: absolute;
-    z-index: 20;
-    left: 0;
-    top: 32vh;
-    width: 15vw;
+
+    width: 100%;
 }
 
 .info_go_to .join {
@@ -367,7 +369,7 @@ aside ul li a:hover {
 
 
 .top_tit {
-    margin-left: 200px;
+    margin-left: 100px;
 }
 
 .top_tit h2 {
@@ -394,7 +396,7 @@ aside ul li a:hover {
 .introduction {
     margin-top: 2.5vh;
     width: 70%;
-    margin-left: 200px;
+    margin-left: 100px;
 
 }
 
