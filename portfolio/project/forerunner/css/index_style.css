@@ -252,12 +252,14 @@ body {
 #app {
     background: url(../etc/app-bg3.png)fixed center no-repeat;
     position: relative;
+    background-size: cover;
 }
 
 #app .app_view {
     width: 100vw;
     height: 100vh;
     background: url(../etc/app-visu2.png) center no-repeat;
+    background-size: contain
 }
 
 #app .download {
@@ -279,6 +281,7 @@ body {
     transition: all 1s;
     position: relative;
     background: url(../etc/race-bg3.png) no-repeat center center;
+    background-size: cover;
 }
 
 

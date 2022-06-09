@@ -40,7 +40,7 @@ $(function () {
 
         $(".box_inner").hover(function () {
             $("#race").css({
-                "background": "url(./etc/race-bg2.png)"
+                "background-image": "url(./etc/race-bg2.png)"
 
             }) //배경변화
             $("#race h4,#race h3,#race .logo").removeClass("on"); //로고
